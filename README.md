@@ -1,2 +1,2 @@
 # Github Explorer
-[Demo]http://giovannymassuia.com/github/GithubExplorer
+[Demo](http://giovannymassuia.com/github/GithubExplorer)
