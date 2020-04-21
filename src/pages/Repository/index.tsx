@@ -62,7 +62,7 @@ const Repository: React.FC = () => {
       //   new Promise((r) => setTimeout(r, m));
 
       // await sleep(5000);
-      // await (() => new Promise((r) => setTimeout(r, 2000)))();
+      await (() => new Promise((r) => setTimeout(r, 1000)))();
 
       // console.log('Done!');
 
@@ -112,7 +112,7 @@ const Repository: React.FC = () => {
             </li>
             <li>
               <strong>{repository.open_issues_count}</strong>
-              <span>Issues abertas</span>
+              <span>Open issues</span>
             </li>
           </ul>
         </RepositoryInfo>
@@ -122,8 +122,8 @@ const Repository: React.FC = () => {
             <header>
               <Skeleton circle height={120} width={120} />
               <div>
-                <Skeleton width={300} height={42} />
-                <Skeleton width={480} height={30} />
+                <Skeleton width="30%" height={42} />
+                <Skeleton width="75%" height={30} />
               </div>
             </header>
 
@@ -161,8 +161,8 @@ const Repository: React.FC = () => {
               // eslint-disable-next-line react/no-array-index-key
               <IssuesSkeleton key={i}>
                 <SkeletonTheme color="#fff" highlightColor="#f0f0f5">
-                  <Skeleton width={160} height={25} />
-                  <Skeleton width={480} />
+                  <Skeleton width="30%" height={25} />
+                  <Skeleton width="75%" />
                 </SkeletonTheme>
               </IssuesSkeleton>
             ))}

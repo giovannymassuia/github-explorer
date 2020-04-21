@@ -12,7 +12,8 @@ export const Header = styled.header`
     color: #a8a8b3;
     transition: color 0.2s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: #666;
     }
 
@@ -51,6 +52,24 @@ export const RepositoryInfo = styled.section`
     }
   }
 
+  @media (max-width: 40rem) {
+    margin-top: 40px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    strong {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
   ul {
     display: flex;
     list-style: none;
@@ -73,11 +92,29 @@ export const RepositoryInfo = styled.section`
         color: #6c6c80;
       }
     }
+
+    @media (max-width: 40rem) {
+      justify-content: space-around;
+
+      li {
+        & + li {
+          margin-left: 0;
+        }
+
+        strong {
+          font-size: 24px;
+        }
+      }
+    }
   }
 `;
 
 export const RepositoryInfoSkeleton = styled.section`
   margin-top: 80px;
+
+  @media (max-width: 40rem) {
+    margin-top: 40px;
+  }
 
   header {
     display: flex;
@@ -87,6 +124,7 @@ export const RepositoryInfoSkeleton = styled.section`
       display: flex;
       flex-direction: column;
       margin-left: 18px;
+      width: 100%;
 
       span {
         margin-top: 10px;
@@ -118,6 +156,10 @@ export const RepositoryInfoSkeleton = styled.section`
 export const Issues = styled.div`
   margin-top: 80px;
 
+  @media (max-width: 40rem) {
+    margin-top: 40px;
+  }
+
   a {
     background: #fff;
     border-radius: 5px;
@@ -130,7 +172,8 @@ export const Issues = styled.div`
     align-items: center;
     transition: transform 0.2s;
 
-    &:hover {
+    &:hover,
+    &:active {
       transform: translateX(10px);
     }
 
