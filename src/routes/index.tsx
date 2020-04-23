@@ -5,7 +5,7 @@ import Dashboard from '../pages/Dashboard';
 import Repository from '../pages/Repository';
 
 const Routes: React.FC = () => (
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Dashboard} />
       <Route path="/respositories/:repository+" component={Repository} />
